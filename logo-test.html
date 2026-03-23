@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layane Marques — Versões de Logo para o Site</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@200;300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --gold: #c9a44a;
+            --gold-dk: #8c6520;
+            --wine-deep: #1e0308;
+            --wine: #3d0718;
+            --terra: #7d5a45;
+            --cream: #f5ede3;
+        }
+
+        body {
+            background: var(--wine-deep);
+            color: var(--cream);
+            font-family: 'Montserrat', sans-serif;
+            padding: 60px 40px;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+            letter-spacing: 6px;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            letter-spacing: 5px;
+            color: var(--cream);
+            text-transform: uppercase;
+        }
+
+        .rule {
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 18px auto 0;
+        }
+
+        .sec-label {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 5px;
+            color: var(--gold-dk);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .divider {
+            max-width: 1100px;
+            margin: 0 auto 46px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .div-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(201, 164, 74, 0.12);
+        }
+
+        .div-dm {
+            width: 7px;
+            height: 7px;
+            border: 1px solid var(--gold-dk);
+            transform: rotate(45deg);
+        }
+
+        /* ── Cards ── */
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto 70px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .vlabel {
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: var(--gold-dk);
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .vdesc {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: #555;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .stage {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Fundos */
+        .bg-wine {
+            background: var(--wine-deep);
+            border: 1px solid rgba(201, 164, 74, 0.15);
+        }
+
+        .bg-wine2 {
+            background: var(--wine);
+            border: 1px solid rgba(201, 164, 74, 0.12);
+        }
+
+        .bg-terra {
+            background: var(--terra);
+        }
+
+        .bg-cream {
+            background: var(--cream);
+        }
+
+        .bg-dark {
+            background: #0e0106;
+            border: 1px solid rgba(201, 164, 74, 0.1);
+        }
+
+        /* Logo img — mix-blend-mode para integrar nos fundos escuros */
+        .logo-dark {
+            mix-blend-mode: lighten;
+        }
+
+        .logo-light {
+            mix-blend-mode: multiply;
+            filter: brightness(0.8);
+        }
+
+        .logo-terra {
+            mix-blend-mode: lighten;
+        }
+
+        /* Tamanhos por uso */
+        .sz-header {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .sz-header-m {
+            height: 36px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .sz-sobre {
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .sz-footer {
+            height: 64px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .sz-full {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* Simulação de navbar */
+        .navbar-sim {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            height: 72px;
+            background: rgba(30, 3, 8, 0.95);
+            border-bottom: 1px solid rgba(201, 164, 74, 0.15);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: rgba(245, 237, 227, 0.6);
+            text-transform: uppercase;
+        }
+
+        .nav-cta {
+            font-size: 9px;
+            letter-spacing: 2px;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 6px 14px;
+            text-transform: uppercase;
+        }
+
+        /* Simulação de footer */
+        .footer-sim {
+            width: 100%;
+            background: #0e0106;
+            border-top: 1px solid rgba(201, 164, 74, 0.1);
+            padding: 32px 28px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-cols {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .footer-col-title {
+            font-family: 'Cinzel', serif;
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: var(--cream);
+            text-transform: uppercase;
+        }
+
+        .footer-col-link {
+            font-size: 9px;
+            letter-spacing: 1px;
+            color: #555;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(201, 164, 74, 0.08);
+            padding-top: 16px;
+            font-size: 8px;
+            letter-spacing: 2px;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Favicon grid */
+        .favicon-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 1100px;
+            margin: 0 auto 70px;
+        }
+
+        .fav-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .fav-label {
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: var(--gold-dk);
+            text-transform: uppercase;
+        }
+
+        /* Tamanhos spec table */
+        .spec-table {
+            max-width: 700px;
+            margin: 0 auto 80px;
+            border: 1px solid rgba(201, 164, 74, 0.12);
+        }
+
+        .spec-table tr {
+            border-bottom: 1px solid rgba(201, 164, 74, 0.08);
+        }
+
+        .spec-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .spec-table td {
+            padding: 12px 20px;
+            font-size: 11px;
+        }
+
+        .spec-table td:first-child {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 2px;
+            color: var(--gold);
+            font-size: 10px;
+            text-transform: uppercase;
+            width: 30%;
+        }
+
+        .spec-table td:nth-child(2) {
+            color: var(--cream);
+            width: 25%;
+        }
+
+        .spec-table td:last-child {
+            color: #666;
+            font-size: 10px;
+        }
+
+        .note {
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: rgba(201, 164, 74, 0.15);
+            text-transform: uppercase;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-header">
+        <p class="eyebrow">Layane Marques Advogada</p>
+        <h1 class="title">Logo para o Site — Tamanhos e Posições</h1>
+        <div class="rule"></div>
+    </div>
+
+    <!-- ══════════════════════════
+     TABELA DE TAMANHOS
+══════════════════════════ -->
+    <p class="sec-label">Especificações por Posição</p>
+
+    <table class="spec-table">
+        <tr>
+            <td>Header desktop</td>
+            <td>48px altura</td>
+            <td>Versão horizontal — LM + texto</td>
+        </tr>
+        <tr>
+            <td>Header mobile</td>
+            <td>36px altura</td>
+            <td>Mesma imagem, menor</td>
+        </tr>
+        <tr>
+            <td>Seção Sobre</td>
+            <td>100px altura</td>
+            <td>Acima da bio da advogada</td>
+        </tr>
+        <tr>
+            <td>Footer</td>
+            <td>64px altura</td>
+            <td>Coluna 1 do rodapé</td>
+        </tr>
+        <tr>
+            <td>Favicon</td>
+            <td>32×32px</td>
+            <td>Recorte só do monograma LM</td>
+        </tr>
+        <tr>
+            <td>Background deco</td>
+            <td>400–600px</td>
+            <td>Opacity 3–5%, elemento decorativo</td>
+        </tr>
+    </table>
+
+    <!-- ══════════════════════════
+     V1: HEADER SIMULADO
+══════════════════════════ -->
+    <div class="divider">
+        <div class="div-line"></div>
+        <div class="div-dm"></div>
+        <div class="div-line"></div>
+    </div>
+    <p class="sec-label">Versão 01 — Header · Desktop (48px)</p>
+
+    <div style="max-width:1100px;margin:0 auto 60px;">
+        <div class="card" style="align-items:stretch;">
+            <span class="vlabel">Simulação real do header do site</span>
+            <div class="navbar-sim">
+                <img src="assets/output/logo-horizontal.png" class="logo-dark sz-header" alt="Layane Marques Advogada">
+                <div class="nav-links">
+                    <span>Início</span>
+                    <span>Áreas</span>
+                    <span>Sobre</span>
+                    <span>Contato</span>
+                </div>
+                <span class="nav-cta">Consulta Gratuita</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════
+     V2: HEADER MOBILE
+══════════════════════════ -->
+    <p class="sec-label">Versão 02 — Header · Mobile (36px)</p>
+
+    <div style="max-width:420px;margin:0 auto 60px;">
+        <div class="card" style="align-items:stretch;">
+            <span class="vlabel">Simulação mobile</span>
+            <div class="navbar-sim" style="justify-content:space-between;">
+                <img src="assets/output/logo-horizontal.png" class="logo-dark sz-header-m"
+                    alt="Layane Marques Advogada">
+                <!-- hamburguer -->
+                <div style="display:flex;flex-direction:column;gap:5px;cursor:pointer;">
+                    <div style="width:22px;height:1.5px;background:var(--gold);"></div>
+                    <div style="width:22px;height:1.5px;background:var(--gold);"></div>
+                    <div style="width:16px;height:1.5px;background:var(--gold);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══════════════════════════
+     GRID — DEMAIS VERSÕES
+══════════════════════════ -->
+    <div class="divider">
+        <div class="div-line"></div>
+        <div class="div-dm"></div>
+        <div class="div-line"></div>
+    </div>
+    <p class="sec-label">Demais Versões por Seção</p>
+
+    <div class="grid">
+
+        <!-- V3: Seção Sobre -->
+        <div class="card">
+            <span class="vlabel">Versão 03 — Seção Sobre (100px)</span>
+            <span class="vdesc">Acima da bio da advogada · fundo vinho</span>
+            <div class="stage bg-wine">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+                    <img src="assets/output/logo-horizontal.png" class="logo-dark sz-sobre"
+                        alt="Layane Marques Advogada">
+                    <div
+                        style="width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);">
+                    </div>
+                    <p
+                        style="font-family:'Montserrat',sans-serif;font-size:10px;letter-spacing:2px;color:#666;text-align:center;max-width:280px;">
+                        Especialista em Direito de Família e Cobrança</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- V4: Footer -->
+        <div class="card">
+            <span class="vlabel">Versão 04 — Footer (64px)</span>
+            <span class="vdesc">Coluna 1 do rodapé</span>
+            <div class="stage bg-dark" style="padding:0;align-items:stretch;">
+                <div class="footer-sim">
+                    <div class="footer-cols">
+                        <div class="footer-col">
+                            <img src="assets/output/logo-horizontal.png" class="logo-dark sz-footer"
+                                alt="Layane Marques Advogada" style="margin-bottom:8px;">
+                            <span class="footer-col-link">Cuidando dos seus direitos</span>
+                            <span class="footer-col-link">com dedicação e humanidade.</span>
+                        </div>
+                        <div class="footer-col">
+                            <span class="footer-col-title">Áreas</span>
+                            <span class="footer-col-link">Direito de Família</span>
+                            <span class="footer-col-link">Direito de Cobrança</span>
+                        </div>
+                        <div class="footer-col">
+                            <span class="footer-col-title">Contato</span>
+                            <span class="footer-col-link">(64) 99609-8677</span>
+                            <span class="footer-col-link">Itumbiara — GO</span>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        © 2025 Layane Marques Advogada — Todos os direitos reservados
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- V5: Fundo Terracota -->
+        <div class="card">
+            <span class="vlabel">Versão 05 — Fundo Terracota</span>
+            <span class="vdesc">Seções de destaque / cards</span>
+            <div class="stage bg-terra">
+                <img src="assets/output/logo-horizontal.png" class="logo-terra"
+                    style="height:80px;width:auto;object-fit:contain;" alt="Layane Marques Advogada">
+            </div>
+        </div>
+
+        <!-- V6: Fundo Claro -->
+        <div class="card">
+            <span class="vlabel">Versão 06 — Fundo Claro</span>
+            <span class="vdesc">Papel timbrado / documentos</span>
+            <div class="stage bg-cream">
+                <img src="assets/output/logo-horizontal.png" class="logo-light"
+                    style="height:80px;width:auto;object-fit:contain;" alt="Layane Marques Advogada">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ══════════════════════════
+     FAVICON
+══════════════════════════ -->
+    <div class="divider">
+        <div class="div-line"></div>
+        <div class="div-dm"></div>
+        <div class="div-line"></div>
+    </div>
+    <p class="sec-label">Favicon / Avatar — Recorte do Monograma LM</p>
+
+    <div class="favicon-grid">
+
+        <!-- 32px -->
+        <div class="fav-card">
+            <span class="fav-label">32×32px · Favicon</span>
+            <div
+                style="width:32px;height:32px;background:#1e0308;border-radius:6px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(201,164,74,0.2);">
+                <img src="assets/output/logo-horizontal.png" class="logo-dark"
+                    style="width:60px;height:auto;margin-left:-14px;" alt="LM">
+            </div>
+        </div>
+
+        <!-- 64px -->
+        <div class="fav-card">
+            <span class="fav-label">64×64px</span>
+            <div
+                style="width:64px;height:64px;background:#1e0308;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1px solid rgba(201,164,74,0.2);">
+                <img src="assets/output/logo-horizontal.png" class="logo-dark"
+                    style="width:120px;height:auto;margin-left:-28px;" alt="LM">
+            </div>
+        </div>
+
+        <!-- 80px -->
+        <div class="fav-card">
+            <span class="fav-label">80×80px · WhatsApp</span>
+            <div
+                style="width:80px;height:80px;background:#1e0308;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(201,164,74,0.25);">
+                <img src="assets/output/logo-horizontal.png" class="logo-dark"
+                    style="width:150px;height:auto;margin-left:-34px;" alt="LM">
+            </div>
+        </div>
+
+        <!-- 160px -->
+        <div class="fav-card">
+            <span class="fav-label">160×160px · Redes Sociais</span>
+            <div
+                style="width:160px;height:160px;background:#1e0308;border-radius:20px;overflow:hidden;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(201,164,74,0.2);">
+                <img src="assets/output/logo-horizontal.png" class="logo-dark"
+                    style="width:280px;height:auto;margin-left:-64px;" alt="LM">
+            </div>
+        </div>
+
+        <!-- 400px instagram -->
+        <div class="fav-card">
+            <span class="fav-label">400×400px · Instagram</span>
+            <div
+                style="width:160px;height:160px;background:#1e0308;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;border:2px solid rgba(201,164,74,0.3);">
+                <img src="assets/output/logo-horizontal.png" class="logo-dark"
+                    style="width:300px;height:auto;margin-left:-70px;" alt="LM">
+            </div>
+            <span style="font-size:8px;letter-spacing:2px;color:#444;text-transform:uppercase;">Circular</span>
+        </div>
+
+    </div>
+
+    <p class="note">© Layane Marques Advogada — Guia de uso da logo para o site</p>
+
+</body>
+
+</html>
