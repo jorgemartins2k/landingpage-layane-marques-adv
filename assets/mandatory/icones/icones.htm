@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layane Marques — Ícones das Áreas de Atuação</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@200;300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --gold: #c9a44a;
+            --gold-lt: #f0dc80;
+            --gold-mid: #d4aa50;
+            --gold-dk: #8c6520;
+            --gold-sh: #5a3c0a;
+            --wine-deep: #1e0308;
+            --wine: #4a0818;
+            --wine-mid: #6b0f2b;
+            --terra: #7d5a45;
+            --cream: #f5ede3;
+            --white: #faf6f0;
+        }
+
+        body {
+            background: var(--wine-deep);
+            color: var(--white);
+            font-family: 'Montserrat', sans-serif;
+            padding: 60px 40px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .eyebrow {
+            font-size: 10px;
+            letter-spacing: 6px;
+            color: var(--gold);
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-bottom: 10px;
+        }
+
+        .title {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            letter-spacing: 5px;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+
+        .rule {
+            width: 50px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            margin: 18px auto 0;
+        }
+
+        .sec-label {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 5px;
+            color: var(--gold-dk);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .divider-sec {
+            max-width: 1100px;
+            margin: 0 auto 50px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .div-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(201, 164, 74, 0.12);
+        }
+
+        .div-dm {
+            width: 7px;
+            height: 7px;
+            border: 1px solid var(--gold-dk);
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+
+        /* ── Grid principal ── */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px 40px;
+            max-width: 900px;
+            margin: 0 auto 80px;
+        }
+
+        .icon-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .vlabel {
+            font-size: 10px;
+            letter-spacing: 4px;
+            color: var(--gold-dk);
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        /* Stage fundos */
+        .stage {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 40px;
+        }
+
+        .bg-wine {
+            background: var(--wine-deep);
+            border: 1px solid rgba(201, 164, 74, 0.15);
+        }
+
+        .bg-terra {
+            background: var(--terra);
+        }
+
+        .bg-cream {
+            background: var(--cream);
+        }
+
+        .bg-dark {
+            background: #0e0208;
+            border: 1px solid rgba(201, 164, 74, 0.12);
+        }
+
+        .bg-vinho {
+            background: var(--wine);
+        }
+
+        /* Texto do ícone */
+        .icon-name {
+            font-family: 'Cinzel', serif;
+            font-size: 15px;
+            letter-spacing: 4px;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        .icon-spec {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: rgba(201, 164, 74, 0.6);
+            font-style: italic;
+            margin-top: 4px;
+        }
+
+        /* Variantes grid */
+        .variants-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto 80px;
+        }
+
+        .var-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .var-label {
+            font-size: 9px;
+            letter-spacing: 3px;
+            color: var(--gold-dk);
+            text-transform: uppercase;
+            font-weight: 300;
+            text-align: center;
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 60px;
+            font-size: 10px;
+            letter-spacing: 3px;
+            color: rgba(201, 164, 74, 0.15);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <p class="eyebrow">Layane Marques Advogada</p>
+        <h1 class="title">Ícones — Áreas de Atuação</h1>
+        <div class="rule"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+     VERSÃO PRINCIPAL — FUNDO VINHO
+══════════════════════════════════════ -->
+    <p class="sec-label">Versão Principal — Fundo Vinho Escuro</p>
+
+    <div class="icon-grid">
+
+        <!-- ═══ ÍCONE 1: DIREITO DE FAMÍLIA ═══ -->
+        <div class="icon-card">
+            <span class="vlabel">Ícone 01 — Direito de Família</span>
+            <div class="stage bg-wine">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+                    <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="fam-g" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#f0dc80" />
+                                <stop offset="40%" stop-color="#d4aa50" />
+                                <stop offset="100%" stop-color="#8c6520" />
+                            </linearGradient>
+                            <linearGradient id="fam-sh" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#5a3c0a" />
+                                <stop offset="100%" stop-color="#a07828" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Casa — símbolo do lar/família -->
+                        <!-- Telhado (triângulo com 3D) -->
+                        <polygon points="80,18 140,68 20,68" fill="url(#fam-g)" />
+                        <!-- Face lateral telhado (sombra 3D) -->
+                        <polygon points="140,68 148,72 88,72 80,68" fill="url(#fam-sh)" opacity="0.7" />
+                        <!-- Chaminé -->
+                        <rect x="100" y="28" width="12" height="22" fill="url(#fam-g)" />
+                        <!-- Face 3D chaminé -->
+                        <polygon points="112,28 118,32 118,50 112,46" fill="url(#fam-sh)" opacity="0.7" />
+
+                        <!-- Paredes da casa -->
+                        <rect x="28" y="68" width="104" height="66" fill="url(#fam-g)" />
+                        <!-- Face lateral direita parede (3D) -->
+                        <polygon points="132,68 142,72 142,138 132,134" fill="url(#fam-sh)" opacity="0.75" />
+                        <!-- Base inferior da casa (sombra) -->
+                        <polygon points="28,134 132,134 142,138 38,138" fill="#3a2006" opacity="0.7" />
+
+                        <!-- Porta central -->
+                        <rect x="66" y="98" width="28" height="36" rx="14" fill="#1e0308" />
+                        <!-- Brilho da porta -->
+                        <rect x="68" y="100" width="12" height="32" rx="6" fill="rgba(201,164,74,0.08)" />
+                        <!-- Maçaneta -->
+                        <circle cx="89" cy="118" r="3" fill="url(#fam-g)" />
+
+                        <!-- Janela esquerda -->
+                        <rect x="36" y="82" width="22" height="20" rx="2" fill="#1e0308" />
+                        <line x1="47" y1="82" x2="47" y2="102" stroke="url(#fam-g)" stroke-width="1" opacity="0.4" />
+                        <line x1="36" y1="92" x2="58" y2="92" stroke="url(#fam-g)" stroke-width="1" opacity="0.4" />
+
+                        <!-- Janela direita -->
+                        <rect x="102" y="82" width="22" height="20" rx="2" fill="#1e0308" />
+                        <line x1="113" y1="82" x2="113" y2="102" stroke="url(#fam-g)" stroke-width="1" opacity="0.4" />
+                        <line x1="102" y1="92" x2="124" y2="92" stroke="url(#fam-g)" stroke-width="1" opacity="0.4" />
+
+                        <!-- Coração pequeno sobre a porta — símbolo de família/afeto -->
+                        <path
+                            d="M80,90 C80,90 74,84 74,80 C74,76.5 76.5,74 80,77 C83.5,74 86,76.5 86,80 C86,84 80,90 80,90Z"
+                            fill="url(#fam-g)" opacity="0.9" />
+                    </svg>
+
+                    <div style="text-align:center;">
+                        <div class="icon-name">Direito de Família</div>
+                        <div class="icon-spec">Proteção · União · Herança</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ ÍCONE 2: DIREITO DE COBRANÇA ═══ -->
+        <div class="icon-card">
+            <span class="vlabel">Ícone 02 — Direito de Cobrança</span>
+            <div class="stage bg-wine">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:20px;">
+                    <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="cob-g" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#f0dc80" />
+                                <stop offset="40%" stop-color="#d4aa50" />
+                                <stop offset="100%" stop-color="#8c6520" />
+                            </linearGradient>
+                            <linearGradient id="cob-sh" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#5a3c0a" />
+                                <stop offset="100%" stop-color="#a07828" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- Documento / contrato base -->
+                        <rect x="30" y="20" width="80" height="106" rx="4" fill="url(#cob-g)" />
+                        <!-- Face lateral direita 3D documento -->
+                        <polygon points="110,20 118,26 118,130 110,126" fill="url(#cob-sh)" opacity="0.8" />
+                        <!-- Face inferior 3D -->
+                        <polygon points="30,126 110,126 118,130 38,130" fill="#3a2006" opacity="0.7" />
+                        <!-- Dobra canto superior direito -->
+                        <polygon points="88,20 110,20 110,38" fill="#1e0308" opacity="0.4" />
+                        <polygon points="88,20 110,38 88,38" fill="url(#cob-sh)" opacity="0.5" />
+
+                        <!-- Linhas de texto no documento -->
+                        <rect x="40" y="48" width="50" height="4" rx="2" fill="#1e0308" opacity="0.35" />
+                        <rect x="40" y="58" width="44" height="4" rx="2" fill="#1e0308" opacity="0.35" />
+                        <rect x="40" y="68" width="50" height="4" rx="2" fill="#1e0308" opacity="0.35" />
+                        <rect x="40" y="78" width="36" height="4" rx="2" fill="#1e0308" opacity="0.35" />
+                        <!-- Linha de assinatura -->
+                        <rect x="40" y="104" width="50" height="2" rx="1" fill="#1e0308" opacity="0.5" />
+
+                        <!-- Cifrão estilizado sobreposto (símbolo de cobrança) -->
+                        <!-- Círculo de fundo do cifrão -->
+                        <circle cx="118" cy="108" r="30" fill="var(--wine-deep)" />
+                        <circle cx="118" cy="108" r="28" fill="url(#cob-g)" opacity="0.15" />
+                        <circle cx="118" cy="108" r="28" fill="none" stroke="url(#cob-g)" stroke-width="2" />
+
+                        <!-- Símbolo R$ estilizado -->
+                        <!-- R -->
+                        <text x="104" y="116" font-family="Cinzel, serif" font-size="22" font-weight="700"
+                            fill="url(#cob-g)" letter-spacing="1">R$</text>
+
+                        <!-- Duas linhas horizontais cortando o cifrão (estilo formal) -->
+                        <line x1="106" y1="92" x2="130" y2="92" stroke="url(#cob-g)" stroke-width="1.2" opacity="0.5" />
+                        <line x1="106" y1="96" x2="130" y2="96" stroke="url(#cob-g)" stroke-width="1.2" opacity="0.5" />
+                    </svg>
+
+                    <div style="text-align:center;">
+                        <div class="icon-name">Direito de Cobrança</div>
+                        <div class="icon-spec">Dívidas · Contratos · Execução</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ══════════════════════════════════════
+     VARIANTES — 4 FUNDOS CADA
+══════════════════════════════════════ -->
+    <div class="divider-sec">
+        <div class="div-line"></div>
+        <div class="div-dm"></div>
+        <div class="div-line"></div>
+    </div>
+    <p class="sec-label">Variantes por Fundo</p>
+
+    <div class="variants-grid">
+
+        <!-- Família - Terracota -->
+        <div class="var-card">
+            <span class="var-label">Família · Terracota</span>
+            <div class="stage bg-terra" style="padding:30px 20px;">
+                <svg width="100" height="100" viewBox="0 0 160 160" fill="none">
+                    <defs>
+                        <linearGradient id="ft1" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f0dc80" />
+                            <stop offset="40%" stop-color="#d4aa50" />
+                            <stop offset="100%" stop-color="#8c6520" />
+                        </linearGradient>
+                        <linearGradient id="fs1" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#5a3c0a" />
+                            <stop offset="100%" stop-color="#a07828" />
+                        </linearGradient>
+                    </defs>
+                    <polygon points="80,18 140,68 20,68" fill="url(#ft1)" />
+                    <polygon points="140,68 148,72 88,72 80,68" fill="url(#fs1)" opacity="0.7" />
+                    <rect x="100" y="28" width="12" height="22" fill="url(#ft1)" />
+                    <polygon points="112,28 118,32 118,50 112,46" fill="url(#fs1)" opacity="0.7" />
+                    <rect x="28" y="68" width="104" height="66" fill="url(#ft1)" />
+                    <polygon points="132,68 142,72 142,138 132,134" fill="url(#fs1)" opacity="0.75" />
+                    <polygon points="28,134 132,134 142,138 38,138" fill="#3a2006" opacity="0.7" />
+                    <rect x="66" y="98" width="28" height="36" rx="14" fill="#1e0308" opacity="0.5" />
+                    <circle cx="89" cy="118" r="3" fill="url(#ft1)" />
+                    <rect x="36" y="82" width="22" height="20" rx="2" fill="#1e0308" opacity="0.4" />
+                    <rect x="102" y="82" width="22" height="20" rx="2" fill="#1e0308" opacity="0.4" />
+                    <path
+                        d="M80,90 C80,90 74,84 74,80 C74,76.5 76.5,74 80,77 C83.5,74 86,76.5 86,80 C86,84 80,90 80,90Z"
+                        fill="url(#ft1)" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Família - Vinho -->
+        <div class="var-card">
+            <span class="var-label">Família · Vinho</span>
+            <div class="stage bg-vinho" style="padding:30px 20px;">
+                <svg width="100" height="100" viewBox="0 0 160 160" fill="none">
+                    <defs>
+                        <linearGradient id="ft2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f4e090" />
+                            <stop offset="40%" stop-color="#d9b455" />
+                            <stop offset="100%" stop-color="#a07828" />
+                        </linearGradient>
+                        <linearGradient id="fs2" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#6a4808" />
+                            <stop offset="100%" stop-color="#b08228" />
+                        </linearGradient>
+                    </defs>
+                    <polygon points="80,18 140,68 20,68" fill="url(#ft2)" />
+                    <polygon points="140,68 148,72 88,72 80,68" fill="url(#fs2)" opacity="0.7" />
+                    <rect x="100" y="28" width="12" height="22" fill="url(#ft2)" />
+                    <rect x="28" y="68" width="104" height="66" fill="url(#ft2)" />
+                    <polygon points="132,68 142,72 142,138 132,134" fill="url(#fs2)" opacity="0.75" />
+                    <rect x="66" y="98" width="28" height="36" rx="14" fill="#1e0308" opacity="0.5" />
+                    <circle cx="89" cy="118" r="3" fill="url(#ft2)" />
+                    <rect x="36" y="82" width="22" height="20" rx="2" fill="#1e0308" opacity="0.4" />
+                    <rect x="102" y="82" width="22" height="20" rx="2" fill="#1e0308" opacity="0.4" />
+                    <path
+                        d="M80,90 C80,90 74,84 74,80 C74,76.5 76.5,74 80,77 C83.5,74 86,76.5 86,80 C86,84 80,90 80,90Z"
+                        fill="url(#ft2)" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Família - Claro -->
+        <div class="var-card">
+            <span class="var-label">Família · Claro</span>
+            <div class="stage bg-cream" style="padding:30px 20px;">
+                <svg width="100" height="100" viewBox="0 0 160 160" fill="none">
+                    <defs>
+                        <linearGradient id="ft3" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#c9a44a" />
+                            <stop offset="100%" stop-color="#7a5010" />
+                        </linearGradient>
+                        <linearGradient id="fs3" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#3d2206" />
+                            <stop offset="100%" stop-color="#9a7828" />
+                        </linearGradient>
+                    </defs>
+                    <polygon points="80,18 140,68 20,68" fill="url(#ft3)" />
+                    <polygon points="140,68 148,72 88,72 80,68" fill="url(#fs3)" opacity="0.7" />
+                    <rect x="100" y="28" width="12" height="22" fill="url(#ft3)" />
+                    <rect x="28" y="68" width="104" height="66" fill="url(#ft3)" />
+                    <polygon points="132,68 142,72 142,138 132,134" fill="url(#fs3)" opacity="0.75" />
+                    <polygon points="28,134 132,134 142,138 38,138" fill="#3d2206" opacity="0.5" />
+                    <rect x="66" y="98" width="28" height="36" rx="14" fill="#f5ede3" />
+                    <circle cx="89" cy="118" r="3" fill="url(#ft3)" />
+                    <rect x="36" y="82" width="22" height="20" rx="2" fill="#f5ede3" opacity="0.5" />
+                    <rect x="102" y="82" width="22" height="20" rx="2" fill="#f5ede3" opacity="0.5" />
+                    <path
+                        d="M80,90 C80,90 74,84 74,80 C74,76.5 76.5,74 80,77 C83.5,74 86,76.5 86,80 C86,84 80,90 80,90Z"
+                        fill="url(#ft3)" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Família - Favicon -->
+        <div class="var-card">
+            <span class="var-label">Família · Favicon</span>
+            <div class="stage" style="background:#1e0308;padding:30px 20px;border:1px solid rgba(201,164,74,0.15);">
+                <div
+                    style="width:80px;height:80px;background:#1e0308;border:1.5px solid rgba(201,164,74,0.3);border-radius:16px;display:flex;align-items:center;justify-content:center;">
+                    <svg width="52" height="52" viewBox="0 0 160 160" fill="none">
+                        <defs>
+                            <linearGradient id="ft4" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#f0dc80" />
+                                <stop offset="100%" stop-color="#8c6520" />
+                            </linearGradient>
+                        </defs>
+                        <polygon points="80,18 140,68 20,68" fill="url(#ft4)" />
+                        <rect x="28" y="68" width="104" height="66" fill="url(#ft4)" />
+                        <rect x="66" y="98" width="28" height="36" rx="14" fill="#1e0308" opacity="0.6" />
+                        <path
+                            d="M80,90 C80,90 74,84 74,80 C74,76.5 76.5,74 80,77 C83.5,74 86,76.5 86,80 C86,84 80,90 80,90Z"
+                            fill="#1e0308" opacity="0.5" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cobrança - Terracota -->
+        <div class="var-card">
+            <span class="var-label">Cobrança · Terracota</span>
+            <div class="stage bg-terra" style="padding:30px 20px;">
+                <svg width="100" height="100" viewBox="0 0 160 160" fill="none">
+                    <defs>
+                        <linearGradient id="ct1" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f0dc80" />
+                            <stop offset="40%" stop-color="#d4aa50" />
+                            <stop offset="100%" stop-color="#8c6520" />
+                        </linearGradient>
+                        <linearGradient id="cs1" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#5a3c0a" />
+                            <stop offset="100%" stop-color="#a07828" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="30" y="20" width="80" height="106" rx="4" fill="url(#ct1)" />
+                    <polygon points="110,20 118,26 118,130 110,126" fill="url(#cs1)" opacity="0.8" />
+                    <polygon points="88,20 110,20 110,38" fill="#1e0308" opacity="0.35" />
+                    <polygon points="88,20 110,38 88,38" fill="url(#cs1)" opacity="0.5" />
+                    <rect x="40" y="48" width="50" height="4" rx="2" fill="#1e0308" opacity="0.3" />
+                    <rect x="40" y="58" width="44" height="4" rx="2" fill="#1e0308" opacity="0.3" />
+                    <rect x="40" y="68" width="50" height="4" rx="2" fill="#1e0308" opacity="0.3" />
+                    <rect x="40" y="104" width="50" height="2" rx="1" fill="#1e0308" opacity="0.45" />
+                    <circle cx="118" cy="108" r="28" fill="var(--terra)" opacity="0.9" />
+                    <circle cx="118" cy="108" r="26" fill="none" stroke="url(#ct1)" stroke-width="2" />
+                    <text x="104" y="116" font-family="Cinzel, serif" font-size="22" font-weight="700" fill="url(#ct1)"
+                        letter-spacing="1">R$</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Cobrança - Vinho -->
+        <div class="var-card">
+            <span class="var-label">Cobrança · Vinho</span>
+            <div class="stage bg-vinho" style="padding:30px 20px;">
+                <svg width="100" height="100" viewBox="0 0 160 160" fill="none">
+                    <defs>
+                        <linearGradient id="ct2" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#f4e090" />
+                            <stop offset="40%" stop-color="#d9b455" />
+                            <stop offset="100%" stop-color="#a07828" />
+                        </linearGradient>
+                        <linearGradient id="cs2" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#6a4808" />
+                            <stop offset="100%" stop-color="#b08228" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="30" y="20" width="80" height="106" rx="4" fill="url(#ct2)" />
+                    <polygon points="110,20 118,26 118,130 110,126" fill="url(#cs2)" opacity="0.8" />
+                    <polygon points="88,20 110,20 110,38" fill="#1e0308" opacity="0.35" />
+                    <polygon points="88,20 110,38 88,38" fill="url(#cs2)" opacity="0.5" />
+                    <rect x="40" y="48" width="50" height="4" rx="2" fill="#1e0308" opacity="0.3" />
+                    <rect x="40" y="58" width="44" height="4" rx="2" fill="#1e0308" opacity="0.3" />
+                    <rect x="40" y="68" width="50" height="4" rx="2" fill="#1e0308" opacity="0.3" />
+                    <rect x="40" y="104" width="50" height="2" rx="1" fill="#1e0308" opacity="0.45" />
+                    <circle cx="118" cy="108" r="28" fill="var(--wine)" opacity="0.95" />
+                    <circle cx="118" cy="108" r="26" fill="none" stroke="url(#ct2)" stroke-width="2" />
+                    <text x="104" y="116" font-family="Cinzel, serif" font-size="22" font-weight="700" fill="url(#ct2)"
+                        letter-spacing="1">R$</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Cobrança - Claro -->
+        <div class="var-card">
+            <span class="var-label">Cobrança · Claro</span>
+            <div class="stage bg-cream" style="padding:30px 20px;">
+                <svg width="100" height="100" viewBox="0 0 160 160" fill="none">
+                    <defs>
+                        <linearGradient id="ct3" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#c9a44a" />
+                            <stop offset="100%" stop-color="#7a5010" />
+                        </linearGradient>
+                        <linearGradient id="cs3" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#3d2206" />
+                            <stop offset="100%" stop-color="#9a7828" />
+                        </linearGradient>
+                    </defs>
+                    <rect x="30" y="20" width="80" height="106" rx="4" fill="url(#ct3)" />
+                    <polygon points="110,20 118,26 118,130 110,126" fill="url(#cs3)" opacity="0.8" />
+                    <polygon points="88,20 110,20 110,38" fill="#f5ede3" opacity="0.3" />
+                    <polygon points="88,20 110,38 88,38" fill="url(#cs3)" opacity="0.4" />
+                    <rect x="40" y="48" width="50" height="4" rx="2" fill="#f5ede3" opacity="0.4" />
+                    <rect x="40" y="58" width="44" height="4" rx="2" fill="#f5ede3" opacity="0.4" />
+                    <rect x="40" y="68" width="50" height="4" rx="2" fill="#f5ede3" opacity="0.4" />
+                    <rect x="40" y="104" width="50" height="2" rx="1" fill="#f5ede3" opacity="0.5" />
+                    <circle cx="118" cy="108" r="28" fill="var(--cream)" opacity="0.95" />
+                    <circle cx="118" cy="108" r="26" fill="none" stroke="url(#ct3)" stroke-width="2" />
+                    <text x="104" y="116" font-family="Cinzel, serif" font-size="22" font-weight="700" fill="url(#ct3)"
+                        letter-spacing="1">R$</text>
+                </svg>
+            </div>
+        </div>
+
+        <!-- Cobrança - Favicon -->
+        <div class="var-card">
+            <span class="var-label">Cobrança · Favicon</span>
+            <div class="stage" style="background:#1e0308;padding:30px 20px;border:1px solid rgba(201,164,74,0.15);">
+                <div
+                    style="width:80px;height:80px;background:#1e0308;border:1.5px solid rgba(201,164,74,0.3);border-radius:16px;display:flex;align-items:center;justify-content:center;">
+                    <svg width="52" height="52" viewBox="0 0 160 160" fill="none">
+                        <defs>
+                            <linearGradient id="ct4" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#f0dc80" />
+                                <stop offset="100%" stop-color="#8c6520" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="20" y="15" width="70" height="92" rx="4" fill="url(#ct4)" />
+                        <circle cx="110" cy="100" r="34" fill="#1e0308" />
+                        <circle cx="110" cy="100" r="32" fill="none" stroke="url(#ct4)" stroke-width="2.5" />
+                        <text x="96" y="108" font-family="Cinzel, serif" font-size="24" font-weight="700"
+                            fill="url(#ct4)">R$</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="note">© Layane Marques Advogada — Ícones em SVG escalável</p>
+</body>
+
+</html>

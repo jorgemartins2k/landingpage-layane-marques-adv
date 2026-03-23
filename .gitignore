@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+*.swp
+
+# Agents (internal skills — não vai para o repo)
+.agents/
+
+# Temp
+*.tmp
+*.log
